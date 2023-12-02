@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import MapChart from "./Map";
 
 const Section = styled.div`
   height: 100vh;
@@ -64,7 +65,9 @@ const Contact = () => {
             <Button>Send</Button>
           </Form>
         </Left>
-        <Right></Right>
+        <Right>
+          <MapChart />
+        </Right>
       </Container>
     </Section>
   );
