@@ -27,6 +27,7 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-size: 74px;
+  color: white;
 `;
 
 const WhatIDo = styled.div`
