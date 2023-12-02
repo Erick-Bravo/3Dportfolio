@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import MapChart from "./Map";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 
 const Section = styled.div`
   height: 100vh;
@@ -52,17 +54,55 @@ const Button = styled.button`
   padding: 20px;
 `;
 
+const SmallMessage = styled.div`
+  color: white;
+`;
+
 const Contact = () => {
+  const ref = useRef();
+  const [success, setSuccess] = useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("SUBMIT BUTTON REGISTERED");
+    emailjs
+      .sendForm(
+        "service_ho8q2ay",
+        "template_2wvfbr5",
+        ref.current,
+        "9hOwx5hJp624Sf_kr"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setSuccess(false);
+        }
+      );
+  };
+
   return (
     <Section>
       <Container>
         <Left>
-          <Form>
+          <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Us</Title>
-            <Input placeholder="Name" />
-            <Input placeholder="Email" />
-            <TextArea placeholder="Write your message" row={10} />
-            <Button>Send</Button>
+            <Input placeholder="Name" name="name" />
+            <Input placeholder="Email" name="email" />
+            <TextArea
+              placeholder="Write your message"
+              name="message"
+              row={10}
+            />
+            <Button type="submit">Send</Button>
+            {success && (
+              <SmallMessage>
+                Your message has been sent. I am excited to speak with you.
+              </SmallMessage>
+            )}
           </Form>
         </Left>
         <Right>
