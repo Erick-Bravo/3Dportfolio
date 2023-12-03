@@ -84,7 +84,7 @@ const Who = () => {
           <Desc>
             I have a proven track record of collaborating cross-functionally
             with technical teams and stakeholders across all phases of the
-            software development lifecycle.
+            software development lifecycle. I am always learning new tech to stay up-to-date with the latest technologies.
           </Desc>
           <Button>See My Work</Button>
         </Right>

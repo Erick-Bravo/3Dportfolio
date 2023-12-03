@@ -1,7 +1,8 @@
-import styled from "styled-components";
 import Default from "./ProjectComps/Default";
 import Driveway from "./ProjectComps/Driveway";
 import Yosemite from "./ProjectComps/Yosemite";
+import BFDI from "./ProjectComps/BFDI";
+import styled from "styled-components";
 import { useState } from "react";
 
 const Section = styled.div`
@@ -18,7 +19,7 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 const Left = styled.div`
-  flex: 1;
+  flex: 2;
   display: flex;
   align-items: center;
 `;
@@ -37,12 +38,12 @@ const ListItem = styled.li`
   font-size: 90px;
   font-weight: bold;
   cursor: pointer;
-  color: transparent;
+  color: ${(props) => props.color};
   -webkit-text-stroke: 1px white;
   position: relative;
 
-  ::after {
-    content: "${(props) => props.text}";
+  /* ::after {
+    content: ${(props) => props.text};
     position: absolute;
     top: 0;
     left: 0;
@@ -50,7 +51,7 @@ const ListItem = styled.li`
     width: 0px;
     overflow: hidden;
     white-space: nowrap;
-  }
+  } */
 
   &:hover {
     color: pink;
@@ -66,36 +67,32 @@ const ListItem = styled.li`
   }
 `;
 
-const data = [
-  "Developer",
-  "Collaborator",
-  "Innovator",
-  "Team Player",
-  "Job Ready",
-];
+const data = ["Projects:", "Driveway", "Yosemite", "BFDI"];
 
 const Works = () => {
-  const [work, setWork] = useState("Default");
+  const [work, setWork] = useState("Projects:");
   return (
     <Section>
       <Container>
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item} onClick={() => setWork(text)}>
+              <ListItem
+                key={item}
+                text={item}
+                color={work === item ? "pink" : "transparent"}
+                onClick={() => setWork(item)}
+              >
                 {item}
               </ListItem>
             ))}
           </List>
         </Left>
         <Right>
-          {work === "Default" ? (
-            <Default />
-          ) : work === "Driveway" ? (
-            <Driveway />
-          ) : (
-            <Yosemite />
-          )}
+          {work === "Projects:" && <Default />}
+          {work === "Driveway" && <Driveway />}
+          {work === "Yosemite" && <Yosemite />}
+          {work === "BFDI" && <BFDI />}
         </Right>
       </Container>
     </Section>
