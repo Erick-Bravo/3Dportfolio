@@ -13,10 +13,10 @@ const Cube = () => {
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial>
         <RenderTexture attach="map">
-          <PerspectiveCamera makeDefault position={[0, 0, 2]} />
+          <PerspectiveCamera makeDefault position={[0, 0, 4]} />
           <color attach="background" args={["pink"]} />
           <Text ref={textRef} fontSize={1} color="#555">
-            Hello
+            Erick Bravo
           </Text>
         </RenderTexture>
       </meshStandardMaterial>
