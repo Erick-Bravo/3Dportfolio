@@ -97,9 +97,9 @@ const Hero = () => {
         <Right>
           <Canvas >
             <OrbitControls enableZoom={false} />
-            <ambientLight intensity={2} />
+            <ambientLight intensity={8} />
             <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[1, 100, 200]} scale={1}>
+            <Sphere args={[1, 100, 200]} scale={1.7}>
               <MeshDistortMaterial
                 color="#3d1c56"
                 attach="material"
@@ -108,7 +108,7 @@ const Hero = () => {
               />
             </Sphere>
           </Canvas>
-          {/* <Img src="./img/moon.png" /> */}
+          <Img src="./img/moon.png" />
         </Right>
       </Container>
     </Section>

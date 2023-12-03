@@ -79,7 +79,7 @@ const Who = () => {
           <Title>Who. I. Am.</Title>
           <WhatIDo>
             <Line src="./img/line.png" />
-            <Subtitle>I love developing!</Subtitle>
+            <Subtitle>I love being a developer!</Subtitle>
           </WhatIDo>
           <Desc>
             I have a proven track record of collaborating cross-functionally

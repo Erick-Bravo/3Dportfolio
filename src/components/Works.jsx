@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import Default from "./ProjectComps/Default";
+import Driveway from "./ProjectComps/Driveway";
+import Yosemite from "./ProjectComps/Yosemite";
+import { useState } from "react";
 
 const Section = styled.div`
   height: 100vh;
@@ -71,17 +75,28 @@ const data = [
 ];
 
 const Works = () => {
+  const [work, setWork] = useState("Default");
   return (
     <Section>
       <Container>
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem>{item}</ListItem>
+              <ListItem key={item} text={item} onClick={() => setWork(text)}>
+                {item}
+              </ListItem>
             ))}
           </List>
         </Left>
-        <Right></Right>
+        <Right>
+          {work === "Default" ? (
+            <Default />
+          ) : work === "Driveway" ? (
+            <Driveway />
+          ) : (
+            <Yosemite />
+          )}
+        </Right>
       </Container>
     </Section>
   );
