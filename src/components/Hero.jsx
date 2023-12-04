@@ -64,7 +64,7 @@ const Right = styled.div`
 
 const Img = styled.img`
   width: 800px;
-  height: 600px;
+  height: 400px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -108,7 +108,7 @@ const Hero = () => {
               />
             </Sphere>
           </Canvas>
-          <Img src="./img/moon.png" />
+          <Img src="./img/profile.jpeg" />
         </Right>
       </Container>
     </Section>

@@ -1,3 +1,4 @@
+import React, { useRef, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 
 const Container = styled.div`
@@ -11,9 +12,9 @@ const Container = styled.div`
 `;
 
 const Driveway = () => {
-  return (
-   <Container>This is the Driveway component</Container>
-  )
-}
+  const mountRef = useRef(null);
+  
+  return <Container>This is the Driveway component</Container>;
+};
 
 export default Driveway;

@@ -8,11 +8,12 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   color: white;
+  font-size: 40px;
 `;
 
 const Default = () => {
   return (
-   <Container>This is the Default component</Container>
+   <Container>Click on a Project</Container>
   )
 }
 
