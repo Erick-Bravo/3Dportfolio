@@ -2,6 +2,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Cube from "./Cube";
 import styled from "styled-components";
+import { Button } from "./Navbar";
 
 const Section = styled.div`
   height: 100vh;
@@ -52,22 +53,12 @@ const Desc = styled.p`
   font-size: 24px;
   color: lightgrey;
 `;
-const Button = styled.button`
-  background-color: #da4ea2;
-  color: white;
-  font-weight: 500;
-  width: 100px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-`;
 
 const Who = () => {
   return (
     <Section>
       <Container>
-        <Left>
+        <Left id="Who">
           <Canvas camera={{fov: 25, position: [5, 5, 5]}}>
             <OrbitControls enableZoom={false} autoRotate={true} />
             <ambientLight intensity={1} />
@@ -86,7 +77,7 @@ const Who = () => {
             with technical teams and stakeholders across all phases of the
             software development lifecycle. I am always learning new tech to stay up-to-date with the latest technologies.
           </Desc>
-          <Button>See My Work</Button>
+          <Button href="#Projects">See My Work</Button>
         </Right>
       </Container>
     </Section>

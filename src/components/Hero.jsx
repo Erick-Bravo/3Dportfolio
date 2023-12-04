@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import Navbar from "./Navbar";
+import Navbar, { Button } from "./Navbar";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
@@ -47,16 +47,6 @@ const Desc = styled.p`
   font-size: 24px;
   color: lightgrey;
 `;
-const Button = styled.button`
-  background-color: #da4ea2;
-  color: white;
-  font-weight: 500;
-  width: 100px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-`;
 const Right = styled.div`
   flex: 3;
   position: relative;
@@ -92,7 +82,7 @@ const Hero = () => {
             <Line src="./img/line.png" />
             <Subtitle>Software Developer</Subtitle>
           </WhatIDo>
-          <Button>Learn More</Button>
+          <Button href="#Who">Learn More</Button>
         </Left>
         <Right>
           <Canvas >

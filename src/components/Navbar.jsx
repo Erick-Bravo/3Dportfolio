@@ -42,14 +42,16 @@ const Icon = styled.img`
   cursor: pointer;
 `;
 
-const Button = styled.button`
-    width: 100px;
-    padding: 10px;
-    background-color: #da4ea2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+export const Button = styled.a`
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+  background-color: #da4ea2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
 `;
 
 const Navbar = () => {
@@ -66,8 +68,7 @@ const Navbar = () => {
           </List>
         </Links>
         <Icons>
-          <Icon src="./img/search.png" />
-          <Button>Hire Now</Button>
+          <Button href="#Contact" scroll={false}>Hire Now</Button>
         </Icons>
       </Container>
     </Section>

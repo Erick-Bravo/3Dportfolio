@@ -74,7 +74,7 @@ const Works = () => {
   return (
     <Section>
       <Container>
-        <Left>
+        <Left id="Projects">
           <List>
             {data.map((item) => (
               <ListItem
