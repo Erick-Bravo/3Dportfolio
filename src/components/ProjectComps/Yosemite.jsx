@@ -1,19 +1,18 @@
-import styled, { keyframes } from "styled-components";
-
-const Container = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-`;
+import { Container, Text, Video } from "./Projects.Styled";
 
 const Yosemite = () => {
   return (
-   <Container>This is the Yosemite component</Container>
-  )
-}
+    <Container>
+      <Video src="./video/Yosemite.mp4" autoPlay loop muted />
+      <Text>
+        Yosemite National Park is home to over 2,000 employees during peak
+        season. I had the privilege of being asked to completely revamp their
+        original black and white website, and turn it into something their
+        employees would look forward to visiting for resources as they live and
+        work in Yosemite. (Fun Fact: I also used to live and work in Yosemite)
+      </Text>
+    </Container>
+  );
+};
 
 export default Yosemite;
