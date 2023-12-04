@@ -21,3 +21,16 @@ export const Text = styled.div`
   margin-top: 50px;
   width: 775px;
 `
+
+export const FlexLeft = styled.div`
+    display: flex;
+    width: 775px;
+    justify-content: flex-start;
+`
+
+export const Link = styled.a`
+   font-size: 25px;
+   text-decoration: none;
+   color: #6fbae0;
+   margin-top: 20px;
+`

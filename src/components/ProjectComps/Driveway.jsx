@@ -1,4 +1,4 @@
-import { Container, Text, Video } from "./Projects.Styled";
+import { Container, FlexLeft, Link, Text, Video } from "./Projects.Styled";
 
 const Driveway = () => {
   return (
@@ -11,6 +11,13 @@ const Driveway = () => {
         you can purchase one of over 40,000 vehicles, or sell your own vehicle
         without ever having to walk into a dealer.
       </Text>
+      <FlexLeft>
+        <Link
+          href="https://www.driveway.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >Driveway.com</Link>
+      </FlexLeft>
     </Container>
   );
 };

@@ -1,4 +1,4 @@
-import { Container, Text, Video } from "./Projects.Styled";
+import { Container, FlexLeft, Link, Text, Video } from "./Projects.Styled";
 
 const Yosemite = () => {
   return (
@@ -11,6 +11,15 @@ const Yosemite = () => {
         employees would look forward to visiting for resources as they live and
         work in Yosemite. (Fun Fact: I also used to live and work in Yosemite)
       </Text>
+      <FlexLeft>
+        <Link
+          href="https://www.yoscommunity.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          YosCommunity.com
+        </Link>
+      </FlexLeft>
     </Container>
   );
 };
