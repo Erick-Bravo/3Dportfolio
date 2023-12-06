@@ -10,6 +10,9 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Container = styled.div`
@@ -18,11 +21,17 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    scroll-snap-align: none;
+  }
 `;
 
 const Left = styled.div`
   flex: 1;
-  position: relative;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Right = styled.div`
@@ -31,11 +40,18 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 74px;
   color: white;
+  @media only screen and (max-width: 768px) {
+    font-size: 60px;
+  }
 `;
 
 const WhatIDo = styled.div`
@@ -52,6 +68,11 @@ const Subtitle = styled.h2`
 const Desc = styled.p`
   font-size: 24px;
   color: lightgrey;
+  @media only screen and (max-width: 768px) {
+    /* width: 100; */
+    font-size: 20px; 
+    padding: 10px;
+  }
 `;
 
 const Who = () => {
@@ -59,7 +80,7 @@ const Who = () => {
     <Section>
       <Container>
         <Left id="Who">
-          <Canvas camera={{fov: 25, position: [5, 5, 5]}}>
+          <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
             <OrbitControls enableZoom={false} autoRotate={true} />
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />
@@ -75,7 +96,8 @@ const Who = () => {
           <Desc>
             I have a proven track record of collaborating cross-functionally
             with technical teams and stakeholders across all phases of the
-            software development lifecycle. I am always learning new tech to stay up-to-date with the latest technologies.
+            software development lifecycle. I am always learning new tech to
+            stay up-to-date with the latest technologies.
           </Desc>
           <Button href="#Projects">See My Work</Button>
         </Right>

@@ -8,11 +8,17 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   color: white;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Video = styled.video`
   height: 600px;
   padding-left: 40px;
+  @media only screen and (max-width: 768px) {
+    height: 250px;
+  }
 `;
 
 export const Text = styled.div`
@@ -20,7 +26,11 @@ export const Text = styled.div`
   font-size: 24px;
   margin-top: 50px;
   width: 775px;
-`
+  @media only screen and (max-width: 768px) {
+    font-size: 15px;
+    width: 100%;
+  }
+`;
 
 export const FlexLeft = styled.div`
     display: flex;

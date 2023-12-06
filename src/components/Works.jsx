@@ -12,16 +12,22 @@ const Section = styled.div`
   justify-content: center;
 `;
 const Container = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 const Left = styled.div`
   flex: 2;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    justify-content: center;
+  }
 `;
 const Right = styled.div`
   flex: 1;
@@ -41,6 +47,10 @@ const ListItem = styled.li`
   color: ${(props) => props.color};
   -webkit-text-stroke: 1px white;
   position: relative;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 
   /* ::after {
     content: ${(props) => props.text};
