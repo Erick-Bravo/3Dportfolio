@@ -59,7 +59,7 @@ const Who = () => {
     <Section>
       <Container>
         <Left id="Who">
-          <Canvas camera={{fov: 25, position: [5, 5, 5]}}>
+          <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
             <OrbitControls enableZoom={false} autoRotate={true} />
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />
@@ -73,9 +73,16 @@ const Who = () => {
             <Subtitle>I love being a developer!</Subtitle>
           </WhatIDo>
           <Desc>
-            I have a proven track record of collaborating cross-functionally
-            with technical teams and stakeholders across all phases of the
-            software development lifecycle. I am always learning new tech to stay up-to-date with the latest technologies.
+            Wherever I find myself, I consistently go the extra mile in
+            fulfilling my work duties. If I notice areas for improvement, I
+            diligently seek ways to enhance them. With 10 years of experience in
+            complex problem-solving across various industries, my proficiency
+            becomes evident from day one. In addition to three years of
+            professional experience collaborating with software development
+            teams large and small, I possess solid training and programming
+            fundamentals, laying a strong foundation for high-performance.
+            Loving what you do is crucial for long-term resilience, which is why
+            software development is perfect for me.
           </Desc>
           <Button href="#Projects">See My Work</Button>
         </Right>
