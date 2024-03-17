@@ -8,8 +8,8 @@ const BFDI = () => {
         HopeIsHere, directed by Black Family Development, Inc., is a
         downloadable mental health assessment specifically designed for minority
         groups facing challenges. Depending on the score obtained, our survey
-        directs users to appropriate resources tailored to their specific needs
-        and responses
+        directs users to appropriate resources, hoping to provide assistance in
+        time of mental health needs.
       </Text>
       <FlexLeft>
         <Link

@@ -5,11 +5,12 @@ const Yosemite = () => {
     <Container>
       <Video src="./video/Yosemite.mp4" autoPlay loop muted />
       <Text>
-        Yosemite National Park is home to over 2,000 employees during peak
-        season. I had the privilege of being asked to completely revamp their
-        original black and white website, and turn it into something their
-        employees would look forward to visiting for resources as they live and
-        work in Yosemite. (Fun Fact: I also used to live and work in Yosemite)
+        Yosemite National Park accommodates over 2,000 employees at its peak
+        season. I was honored to be tasked with a overhaul of
+        their original black-and-white website, transforming it into a platform
+        that employees eagerly anticipate visiting for resources while residing
+        and working in Yosemite. (Fun Fact: I have also lived and worked
+        in Yosemite)
       </Text>
       <FlexLeft>
         <Link
