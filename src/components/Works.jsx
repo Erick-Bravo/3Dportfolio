@@ -12,27 +12,42 @@ const Section = styled.div`
   justify-content: center;
 `;
 const Container = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    /* justify-content: none; */
+  }
 `;
 const Left = styled.div`
   flex: 2;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    justify-content: center;
+    align-items: flex-start;
+  }
 `;
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    /* justify-content: center; */
+  }
 `;
 const List = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media only screen and (max-width: 768px) {
+    padding-top: 70px;
+    /* height: 200px */
+  }
 `;
 const ListItem = styled.li`
   font-size: 90px;
@@ -40,7 +55,12 @@ const ListItem = styled.li`
   cursor: pointer;
   color: ${(props) => props.color};
   -webkit-text-stroke: 1px white;
-  position: relative;
+  /* position: relative; */
+
+  @media only screen and (max-width: 768px) {
+    font-size: 30px;
+
+  }
 
   /* ::after {
     content: ${(props) => props.text};
