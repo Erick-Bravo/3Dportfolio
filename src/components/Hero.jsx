@@ -4,13 +4,13 @@ import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
 const Section = styled.div`
-  height: 100vh;
+  height: 90vh;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media only screen and (max-width: 768px) {
-    height: 100vh;
+    height: 85vh;
   }
 `;
 
@@ -32,6 +32,7 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 20px;
   gap: 20px;
   @media only screen and (max-width: 768px) {
     flex: 1;
@@ -76,6 +77,7 @@ const Desc = styled.p`
 const Right = styled.div`
   flex: 3;
   position: relative;
+  margin-left: 60px;
   @media only screen and (max-width: 768px) {
     flex: 1;
     width: 100%;
@@ -113,7 +115,7 @@ const Hero = () => {
         <Left>
           <Title>Hello! My name is Erick Bravo</Title>
           <WhatIDo>
-            <Line src="./img/line.png" />
+        
             <Subtitle>Frontend | Fullstack | Mobile</Subtitle>
           </WhatIDo>
           <Button href="#Who">
