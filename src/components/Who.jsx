@@ -95,9 +95,15 @@ const Who = () => {
           </WhatIDo>
           <Desc>
             I have a proven track record of collaborating cross-functionally
-            with technical teams and stakeholders across all phases of the
-            software development lifecycle. I am always learning new tech to
-            stay up-to-date with the latest technologies.
+            with technical teams and stakeholders throughout all phases of the
+            software development lifecycle. With four years of experience, I
+            have successfully contributed to projects within both large and
+            small teams, from established projects to new initiatives. I am
+            always enthusiastic about taking on new challenges and contributing
+            in any way I can. I continuously stay updated with the latest
+            technologies to ensure my skills remain current and relevant. Please
+            feel free to reach out to me to discuss my experience and how I can
+            contribute to your team.
           </Desc>
           <Button href="#Projects">See My Work</Button>
         </Right>

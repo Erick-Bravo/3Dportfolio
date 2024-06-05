@@ -88,7 +88,7 @@ const ListItem = styled.li`
   }
 `;
 
-const data = ["Projects:", "HTP Mobile", "Driveway", "Yosemite", "BFDI"];
+const data = ["Projects:", "HTP", "Driveway", "Yosemite", "BFDI"];
 
 const Works = () => {
   const [work, setWork] = useState("Projects:");
@@ -114,7 +114,7 @@ const Works = () => {
           {work === "Driveway" && <Driveway />}
           {work === "Yosemite" && <Yosemite />}
           {work === "BFDI" && <BFDI />}
-          {work === "HTP Mobile" && <HTP />}
+          {work === "HTP" && <HTP />}
         </Right>
       </Container>
     </Section>
