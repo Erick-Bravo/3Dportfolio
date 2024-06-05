@@ -56,15 +56,26 @@ const Icon = styled.img`
 `;
 
 export const Button = styled.a`
-  text-align: center;
-  width: 100px;
+  text-align: "center";
+  width: 150px;
+  height: 35px;
+  margin-top: 15px;
   padding: 10px;
   background-color: #da4ea2;
   color: white;
   border: none;
+  font-size: 20px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
+`;
+
+export const ButtonText = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 `;
 
 const Navbar = () => {
@@ -72,8 +83,10 @@ const Navbar = () => {
     <Section>
       <Container>
         <Icons>
-          <Button href="#Contact" scroll={false}>
-            Hire Now
+          <Button href="#Contact">
+            <ButtonText>
+              Hire Now
+            </ButtonText>
           </Button>
         </Icons>
       </Container>

@@ -1,16 +1,17 @@
 import styled, { keyframes } from "styled-components";
-import Navbar, { Button } from "./Navbar";
+import Navbar, { Button, ButtonText } from "./Navbar";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import { FaCircleChevronDown } from "react-icons/fa6";
 
 const Section = styled.div`
-  height: 100vh;
+  height: 85vh;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media only screen and (max-width: 768px) {
-    height: 100vh;
+    height: 85vh;
   }
 `;
 
@@ -26,18 +27,37 @@ const Container = styled.div`
     margin: 80px;
   }
 `;
+const Top = styled.div`
+  height: 100%;
+  @media only screen and (max-width: 768px) {
+    width: 100%
+  }
+`;
+const Bottom = styled.div`
+  height: 100%;
+  display: flex;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  justify-content: center;
+  padding-top: 40px;
+  align-items: center;
+  @media only screen and (max-width: 768px) {
+    width: 100%
+  }
+`;
 
 const Left = styled.div`
   flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 20px;
   gap: 20px;
   @media only screen and (max-width: 768px) {
     flex: 1;
     align-items: center;
     justify-content: flex-start;
-
   }
 `;
 
@@ -64,21 +84,23 @@ const Line = styled.img`
 `;
 const Subtitle = styled.h2`
   color: #da4ea2;
+  font-size: 40px;
 `;
 const Desc = styled.p`
   font-size: 24px;
   color: lightgrey;
   @media only screen and (max-width: 768px) {
-   padding: 20px;
-   text-align: center;
+    padding: 20px;
+    text-align: center;
   }
 `;
 const Right = styled.div`
   flex: 3;
   position: relative;
+  margin-left: 60px;
   @media only screen and (max-width: 768px) {
     flex: 1;
-    width: 100%
+    width: 100%;
   }
 `;
 
@@ -108,33 +130,38 @@ const Img = styled.img`
 const Hero = () => {
   return (
     <Section>
-      <Navbar />
-      <Container>
-        <Left>
-          <Title>Hello! My name is Erick Bravo</Title>
-          <WhatIDo>
-            <Line src="./img/line.png" />
-            <Subtitle>Software Developer</Subtitle>
-          </WhatIDo>
-          <Button href="#Who">Learn More</Button>
-        </Left>
-        <Right>
-          <Canvas>
-            <OrbitControls enableZoom={false} />
-            <ambientLight intensity={8} />
-            <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[1, 100, 200]} scale={2}>
-              <MeshDistortMaterial
-                color="#3d1c56"
-                attach="material"
-                distort={0.5}
-                speed={2}
-              />
-            </Sphere>
-          </Canvas>
-          <Img src="./img/profile.jpeg" />
-        </Right>
-      </Container>
+      <Top>
+        <Navbar />
+        <Container>
+          <Left>
+            <Title>Hello! My name is Erick Bravo</Title>
+            <WhatIDo>
+              <Subtitle>Frontend | Fullstack | Mobile</Subtitle>
+            </WhatIDo>
+            <Button href="#Who">
+              <ButtonText>Learn More</ButtonText>
+            </Button>
+          </Left>
+          <Right>
+            <Canvas>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={8} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2}>
+                <MeshDistortMaterial
+                  color="#3d1c56"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Canvas>
+            <Img src="./img/profile.jpeg" />
+          </Right>
+        </Container>
+      </Top>
+      {/* <Bottom>Scroll down for About - Projects - Contact</Bottom> */}
+      {/* < FaCircleChevronDown /> */}
     </Section>
   );
 };

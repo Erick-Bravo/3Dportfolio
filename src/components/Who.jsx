@@ -94,16 +94,16 @@ const Who = () => {
             <Subtitle>I love being a developer!</Subtitle>
           </WhatIDo>
           <Desc>
-            Wherever I find myself, I consistently go the extra mile in
-            fulfilling my work duties. If I notice areas for improvement, I
-            diligently seek ways to enhance them. With 10 years of experience in
-            complex problem-solving across various industries, my proficiency
-            becomes evident from day one. In addition to three years of
-            professional experience collaborating with software development
-            teams large and small, I possess solid training and programming
-            fundamentals, laying a strong foundation for high-performance.
-            Loving what you do is crucial for long-term resilience, which is why
-            software development is perfect for me.
+            I have a proven track record of collaborating cross-functionally
+            with technical teams and stakeholders throughout all phases of the
+            software development lifecycle. With four years of experience, I
+            have successfully contributed to projects within both large and
+            small teams, from established projects to new initiatives. I am
+            always enthusiastic about taking on new challenges and contributing
+            in any way I can. I continuously stay updated with the latest
+            technologies to ensure my skills remain current and relevant. Please
+            feel free to reach out to me to discuss my experience and how I can
+            contribute to your team.
           </Desc>
           <Button href="#Projects">See My Work</Button>
         </Right>

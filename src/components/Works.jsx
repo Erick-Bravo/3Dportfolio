@@ -4,6 +4,7 @@ import Yosemite from "./ProjectComps/Yosemite";
 import BFDI from "./ProjectComps/BFDI";
 import styled from "styled-components";
 import { useState } from "react";
+import HTP from "./ProjectComps/HTP";
 
 const Section = styled.div`
   height: 100vh;
@@ -35,6 +36,7 @@ const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  
   @media only screen and (max-width: 768px) {
     /* justify-content: center; */
   }
@@ -87,7 +89,7 @@ const ListItem = styled.li`
   }
 `;
 
-const data = ["Projects:", "Driveway", "Yosemite", "BFDI"];
+const data = ["Projects:", "HTP", "Driveway", "Yosemite", "BFDI"];
 
 const Works = () => {
   const [work, setWork] = useState("Projects:");
@@ -113,6 +115,7 @@ const Works = () => {
           {work === "Driveway" && <Driveway />}
           {work === "Yosemite" && <Yosemite />}
           {work === "BFDI" && <BFDI />}
+          {work === "HTP" && <HTP />}
         </Right>
       </Container>
     </Section>
