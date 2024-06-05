@@ -3,7 +3,7 @@ import { Container } from "./Projects.Styled";
 
 const Default = () => {
   return (
-   <Container>Click on a Project</Container>
+   <Container>Select a Project</Container>
   )
 }
 
