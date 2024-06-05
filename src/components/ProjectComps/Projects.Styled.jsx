@@ -29,7 +29,7 @@ export const Video = styled.video`
 export const Text = styled.div`
   color: lightgrey;
   font-size: 24px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   width: 775px;
   @media only screen and (max-width: 768px) {
     font-size: 15px;

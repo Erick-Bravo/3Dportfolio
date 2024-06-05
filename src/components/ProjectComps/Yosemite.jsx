@@ -3,13 +3,20 @@ import { Container, FlexLeft, Link, Text, Video } from "./Projects.Styled";
 const Yosemite = () => {
   return (
     <Container>
-      <Video src="./video/Yosemite.mp4" autoPlay loop muted />
+      <Video
+        style={{ width: "700px" }}
+        src="./video/Yosemite.mp4"
+        autoPlay
+        loop
+        muted
+      />
       <Text>
-        Yosemite National Park is home to over 2,000 employees during peak
-        season. I had the privilege of being asked to completely revamp their
-        original black and white website, and turn it into something their
-        employees would look forward to visiting for resources as they live and
-        work in Yosemite. (Fun Fact: I also used to live and work in Yosemite)
+        Yosemite National Park employs over 2,000 staff members during peak
+        season. I had the privilege of being entrusted with completely revamping
+        their original black-and-white website. My goal was to transform it into
+        an engaging and resourceful platform that employees would look forward
+        to visiting as they live and work in Yosemite. (Fun fact: I also used to
+        live and work in Yosemite.)
       </Text>
       <FlexLeft>
         <Link

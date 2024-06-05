@@ -3,13 +3,14 @@ import { Container, FlexLeft, Link, Text, Video } from "./Projects.Styled";
 const HTP = () => {
   return (
     <Container>
-      <Video src="./video/Yosemite.mp4" autoPlay loop muted />
+      <Video style={{width: "700px"}} src="./video/Yosemite.mp4" autoPlay loop muted />
       <Text>
-        Yosemite National Park is home to over 2,000 employees during peak
-        season. I had the privilege of being asked to completely revamp their
-        original black and white website, and turn it into something their
-        employees would look forward to visiting for resources as they live and
-        work in Yosemite. (Fun Fact: I also used to live and work in Yosemite)
+        As the sole developer on this project, I took pride in the
+        responsibility of restoring this application to the Google Play Store.
+        Updating the five-year-old React Native application required significant
+        effort, but I was fully up to the task. Thanks to my efforts, the
+        company can now confidently rely on their app being back online and
+        having new features added regularly.
       </Text>
       <FlexLeft>
         <Link
@@ -17,7 +18,7 @@ const HTP = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          HTP Mobile on Google Play Store 
+          HTP Mobile on Google Play Store
         </Link>
       </FlexLeft>
     </Container>
