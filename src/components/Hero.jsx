@@ -2,9 +2,10 @@ import styled, { keyframes } from "styled-components";
 import Navbar, { Button, ButtonText } from "./Navbar";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import { FaCircleChevronDown } from "react-icons/fa6";
 
 const Section = styled.div`
-  height: 90vh;
+  height: 85vh;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
@@ -24,6 +25,25 @@ const Container = styled.div`
     width: 100%;
     flex-direction: column;
     margin: 80px;
+  }
+`;
+const Top = styled.div`
+  height: 100%;
+  @media only screen and (max-width: 768px) {
+    width: 100%
+  }
+`;
+const Bottom = styled.div`
+  height: 100%;
+  display: flex;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  justify-content: center;
+  padding-top: 40px;
+  align-items: center;
+  @media only screen and (max-width: 768px) {
+    width: 100%
   }
 `;
 
@@ -110,35 +130,38 @@ const Img = styled.img`
 const Hero = () => {
   return (
     <Section>
-      <Navbar />
-      <Container>
-        <Left>
-          <Title>Hello! My name is Erick Bravo</Title>
-          <WhatIDo>
-        
-            <Subtitle>Frontend | Fullstack | Mobile</Subtitle>
-          </WhatIDo>
-          <Button href="#Who">
-            <ButtonText>Learn More</ButtonText>
-          </Button>
-        </Left>
-        <Right>
-          <Canvas>
-            <OrbitControls enableZoom={false} />
-            <ambientLight intensity={8} />
-            <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[1, 100, 200]} scale={2}>
-              <MeshDistortMaterial
-                color="#3d1c56"
-                attach="material"
-                distort={0.5}
-                speed={2}
-              />
-            </Sphere>
-          </Canvas>
-          <Img src="./img/profile.jpeg" />
-        </Right>
-      </Container>
+      <Top>
+        <Navbar />
+        <Container>
+          <Left>
+            <Title>Hello! My name is Erick Bravo</Title>
+            <WhatIDo>
+              <Subtitle>Frontend | Fullstack | Mobile</Subtitle>
+            </WhatIDo>
+            <Button href="#Who">
+              <ButtonText>Learn More</ButtonText>
+            </Button>
+          </Left>
+          <Right>
+            <Canvas>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={8} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2}>
+                <MeshDistortMaterial
+                  color="#3d1c56"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Canvas>
+            <Img src="./img/profile.jpeg" />
+          </Right>
+        </Container>
+      </Top>
+      {/* <Bottom>Scroll down for About - Projects - Contact</Bottom> */}
+      {/* < FaCircleChevronDown /> */}
     </Section>
   );
 };
