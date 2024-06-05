@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import Navbar, { Button } from "./Navbar";
+import Navbar, { Button, ButtonText } from "./Navbar";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
@@ -37,7 +37,6 @@ const Left = styled.div`
     flex: 1;
     align-items: center;
     justify-content: flex-start;
-
   }
 `;
 
@@ -64,13 +63,14 @@ const Line = styled.img`
 `;
 const Subtitle = styled.h2`
   color: #da4ea2;
+  font-size: 40px;
 `;
 const Desc = styled.p`
   font-size: 24px;
   color: lightgrey;
   @media only screen and (max-width: 768px) {
-   padding: 20px;
-   text-align: center;
+    padding: 20px;
+    text-align: center;
   }
 `;
 const Right = styled.div`
@@ -78,7 +78,7 @@ const Right = styled.div`
   position: relative;
   @media only screen and (max-width: 768px) {
     flex: 1;
-    width: 100%
+    width: 100%;
   }
 `;
 
@@ -114,9 +114,11 @@ const Hero = () => {
           <Title>Hello! My name is Erick Bravo</Title>
           <WhatIDo>
             <Line src="./img/line.png" />
-            <Subtitle>Software Developer</Subtitle>
+            <Subtitle>Frontend | Fullstack | Mobile</Subtitle>
           </WhatIDo>
-          <Button href="#Who">Learn More</Button>
+          <Button href="#Who">
+            <ButtonText>Learn More</ButtonText>
+          </Button>
         </Left>
         <Right>
           <Canvas>
