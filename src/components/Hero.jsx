@@ -2,7 +2,6 @@ import styled, { keyframes } from "styled-components";
 import Navbar, { Button, ButtonText } from "./Navbar";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { FaCircleChevronDown } from "react-icons/fa6";
 
 const Section = styled.div`
   height: 85vh;

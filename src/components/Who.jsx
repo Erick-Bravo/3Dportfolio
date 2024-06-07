@@ -2,7 +2,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Cube from "./Cube";
 import styled from "styled-components";
-import { Button } from "./Navbar";
+import { Button, ButtonText } from "./Navbar";
 
 const Section = styled.div`
   height: 100vh;
@@ -70,9 +70,68 @@ const Desc = styled.p`
   color: lightgrey;
   @media only screen and (max-width: 768px) {
     /* width: 100; */
-    font-size: 20px; 
+    font-size: 20px;
     padding: 10px;
   }
+`;
+
+const ImgOne = styled.img`
+  width: 600px;
+  height: 350px;
+  object-fit: contain;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: animate 2.5s infinite ease alternate;
+  @media only screen and (max-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @keyframes animate {
+    to {
+      transform: translateY(20px);
+    }
+  }
+`;
+const ImgTwo = styled.img`
+  width: 600px;
+  height: 350px;
+  object-fit: contain;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: animate 2s infinite ease alternate;
+  @media only screen and (max-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @keyframes animate {
+    to {
+      transform: translateY(20px);
+    }
+  }
+`;
+
+const ImgBox = styled.div`
+  height: 100%;
+  padding: 10 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const CubeBox = styled.div`
+  width: 200px;
+  height: 200px;
+`;
+
+const TitleBox = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const Who = () => {
@@ -80,15 +139,23 @@ const Who = () => {
     <Section>
       <Container>
         <Left id="Who">
-          <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
-            <OrbitControls enableZoom={false} autoRotate={true} />
-            <ambientLight intensity={1} />
-            <directionalLight position={[3, 2, 1]} />
-            <Cube />
-          </Canvas>
+          <ImgBox>
+            <ImgOne src="./img/yos.jpg" />
+            <ImgTwo src="./img/elCap.PNG" />
+          </ImgBox>
         </Left>
         <Right>
-          <Title>Who. I. Am.</Title>
+          <TitleBox>
+            <Title>Who. I. Am.</Title>
+            <CubeBox>
+              <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
+                <OrbitControls enableZoom={false} autoRotate={true} />
+                <ambientLight intensity={1} />
+                <directionalLight position={[3, 2, 1]} />
+                <Cube />
+              </Canvas>
+            </CubeBox>
+          </TitleBox>
           <WhatIDo>
             <Line src="./img/line.png" />
             <Subtitle>I love being a developer!</Subtitle>
@@ -105,7 +172,9 @@ const Who = () => {
             feel free to reach out to me to discuss my experience and how I can
             contribute to your team.
           </Desc>
-          <Button href="#Projects">See My Work</Button>
+          <Button href="#Projects">
+            <ButtonText>See My Work</ButtonText>
+          </Button>
         </Right>
       </Container>
     </Section>
