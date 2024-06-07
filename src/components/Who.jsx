@@ -64,6 +64,7 @@ const Line = styled.img`
 `;
 const Subtitle = styled.h2`
   color: #da4ea2;
+  font-size: 34px;
 `;
 const Desc = styled.p`
   font-size: 24px;

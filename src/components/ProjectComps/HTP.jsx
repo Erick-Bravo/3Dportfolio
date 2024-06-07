@@ -3,7 +3,7 @@ import { Container, FlexLeft, Link, Text, Video } from "./Projects.Styled";
 const HTP = () => {
   return (
     <Container>
-      <Video style={{width: "700px"}} src="./video/Yosemite.mp4" autoPlay loop muted />
+      <Video style={{width: "700px"}} src="./video/HTP.mp4" autoPlay loop muted />
       <Text>
         As the sole developer on this project, I took pride in the
         responsibility of restoring this application to the Google Play Store.
@@ -14,7 +14,7 @@ const HTP = () => {
       </Text>
       <FlexLeft>
         <Link
-          href="https://www.yoscommunity.com"
+          href="https://play.google.com/store/apps/details?id=com.HTPmobile.HTPmobile"
           rel="noopener noreferrer"
           target="_blank"
         >
